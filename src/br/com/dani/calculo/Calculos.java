@@ -1,37 +1,34 @@
 package br.com.dani.calculo;
 
+import br.com.Validacoes;
+import br.com.lucad.OpcoesCalculo;
 import br.com.lucad.Operacoes;
 import br.com.lucad.utils.Utils;
 
-public class Calculos extends Utils implements Operacoes  {
-    
-	public void Calculos() {
-	
-	}
-   
-	
-	@Override
-	public int soma(int number1, int number2) {
-		printLn ("Soma:  " +(number1+number2));
-		return number1+number2;
-	}
+public class Calculos extends Utils implements Operacoes {
 
-	@Override
-	public int subtracao(int number1, int number2) {
-		printLn ("Subtração:  " +(number1-number2));
-		return number1-number2;
-	}
+    public void Calculos() {
+    }
 
-	@Override
-	public int multiplicacao(int number1, int number2) {
-		printLn ("Multiplicação:  " +(number1*number2));
-		return number1*number2;
-	}
 
-	@Override
-	public int divisao(int number1, int number2) {
-		printLn ("Divisão:  " +(number1/number2));
-		return number1/number2;
-	}
+    @Override
+    public void soma(int number1, int number2) {
+        printResultado((number1 + number2), OpcoesCalculo.SOMA);
+    }
 
+    @Override
+    public void subtracao(int number1, int number2) {
+        printResultado((number1 - number2), OpcoesCalculo.SUBTRACAO);
+    }
+
+    @Override
+    public void multiplicacao(int number1, int number2) {
+        printResultado((number1 * number2), OpcoesCalculo.MULTILICACAO);
+    }
+
+    @Override
+    public void divisao(int number1, int number2) {
+        Validacoes validacoes = new Validacoes();
+        validacoes.checkNumber2IsZeroOrCalculate(number1, number2);
+    }
 }
