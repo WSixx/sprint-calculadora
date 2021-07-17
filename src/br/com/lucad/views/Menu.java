@@ -3,8 +3,14 @@ package br.com.lucad.views;
 import java.util.Scanner;
 
 public class Menu {
+	 
 
-    public void menuInit(){
+    public static void main(String [] args) {
+    	
+			
+	}
+
+	public void menuInit(){
         Scanner userInput = new Scanner(System.in);
         while (true) {
             System.out.println("1-SOMA\n2-SUBTRACAO\n3-MULTIPLICACAO\n4-DIVISAO\n5-Sair");
@@ -15,15 +21,15 @@ public class Menu {
                     break;
                 }
                 case "2": {
-                    //TODO: SUBTRAÃ‡Ã‚O
+                    //TODO: SUBTRAÇÃO
                     break;
                 }
                 case "3": {
-                    //TODO: MULTIPLICAÃ‡Ã‚O
+                    //TODO: MULTIPLICAÇÃO
                     break;
                 }
                 case "4": {
-                    //TODO: DIVISÃ‚O
+                    //TODO: DIVISÃO
                     break;
                 }
                 case "5": {
