@@ -11,4 +11,6 @@ public interface Operacoes {
     void divisao(int number1, int number2);
 
     void areaDoQuadrado(int base, int altura);
+    
+    void porcentagem(int number1,int number2 );
 }
