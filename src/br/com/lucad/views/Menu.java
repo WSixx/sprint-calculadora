@@ -24,7 +24,8 @@ public class Menu extends Utils {
                 case 2 -> calculos.subtracao(validacoes.checkIsANumber(userInput), validacoes.checkIsANumber(userInput));
                 case 3 -> calculos.multiplicacao(validacoes.checkIsANumber(userInput), validacoes.checkIsANumber(userInput));
                 case 4 -> calculos.divisao(validacoes.checkIsANumber(userInput), validacoes.checkIsANumber(userInput));
-                case 5 -> {
+                case 5 -> calculos.areaDoQuadrado(validacoes.checkIsANumber(userInput), validacoes.checkIsANumber(userInput));
+                case 6 -> {
                     userInput.close();
                     System.exit(0);
                 }
@@ -34,7 +35,7 @@ public class Menu extends Utils {
     }
 
     private void printMenuOpcoes() {
-        System.out.println("1-SOMA\n2-SUBTRACAO\n3-MULTIPLICACAO\n4-DIVISAO\n5-Sair");
+        System.out.println("1-SOMA\n2-SUBTRACAO\n3-MULTIPLICACAO\n4-DIVISAO\n5-Area Quadrado\n6-Sair");
     }
 
 }

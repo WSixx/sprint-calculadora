@@ -31,4 +31,9 @@ public class Calculos extends Utils implements Operacoes {
         Validacoes validacoes = new Validacoes();
         validacoes.checkNumber2IsZeroOrCalculate(number1, number2);
     }
+
+    @Override
+    public void areaDoQuadrado(int base, int altura) {
+        printResultado((base * altura), OpcoesCalculo.BASE_QUADRADO);
+    }
 }
